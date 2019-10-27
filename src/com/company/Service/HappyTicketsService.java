@@ -21,14 +21,14 @@ public class HappyTicketsService {
         return false;
     }
 
-    public int getCountHappyTickets(int discharge,int id,Integer[] numbers) {
+    public int getCountHappyTickets(int discharge,String id,Integer[] numbers) {
         int result = 0;
         for (int i = 0; i < numbers.length; i++) {
-            if (id == 1) {
+            if (id == "Moskow") {
                 if (getMoscowMethod(numbers[i], discharge)) {
                     result++;
                 }
-            } else if (id == 2) {
+            } else if (id == "Piter") {
                 if (getPiterMethod(numbers[i], discharge)) {
                     result++;
                 }

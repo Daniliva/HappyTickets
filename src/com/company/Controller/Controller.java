@@ -38,9 +38,9 @@ public class Controller {
         }
     }
 
-    public int getIdMethod() {
+    public String getIdMethod() {
         outputStr("Enter way in file with have a id method:");
-        return Integer.parseInt(getReading(inputStr()));
+        return getReading(inputStr());
     }
     public int getDischarge() {
         outputStr("Enter discharge:");
@@ -49,7 +49,8 @@ public class Controller {
 
     public void countingHappyTickets() {
         HappyTicketsService happyTicketsService = new HappyTicketsService();
-        int idMethod = getIdMethod();
+        String idMethod = getIdMethod();
+        idMethod.replaceAll("\\s+","");
         int discharge =getDischarge();
         Integer[] numbers = getNumbers();
         int result = happyTicketsService.getCountHappyTickets(discharge, idMethod, numbers);
