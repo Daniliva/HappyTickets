@@ -12,11 +12,9 @@ public class NumberTickets {
         }
         return numberTickets;
     }
-    public void writeNumbersTickets()
-    {
-        NumberTickets numberTickets =new NumberTickets();
-        List<Integer> integers = numberTickets.generatedNumber(6);
-        String t="C://Users//Даниил//Desktop//3.txt";
-        OperationWithFile.writeToTxt(t,integers.toString());
+
+    public void writeNumbersTickets(String way) {
+        List<Integer> integers = generatedNumber(6);
+        OperationWithFile.writeToTxt(way, integers.toString());
     }
 }

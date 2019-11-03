@@ -10,6 +10,7 @@ import java.util.Scanner;
 import static com.company.Controller.Controller.outputStr;
 
 public class OperationWithFile {
+
     public static final String error = "Error 100100100";
 
     public static String readFromTxt(String way) throws Exception {
